@@ -1,51 +1,21 @@
-# ENSF_233_Final_Project
+# Statistic_Project
 
-This project provides a program that analyzes and compares various statistics for two countries in the United Nations (UN). The program uses data from CSV files for population, threatened species, and country information to calculate and display the requested statistics.
+This project provides is a program that allows users to compare statistics between two countries. It uses several Python libraries, including numpy and matplotlib.
 
-## Dependencies
-- numpy: A library for numerical computing.
-- matplotlib: A library for creating visualizations.
+The code defines a class called `printCountryInfo` that represents country information such as name, UN region, area, average population, and total threatened species. The class has a method called `print_stats` that prints the statistics for a country.
 
-## Class: printCountryInfo
-- `country_name`: String representing the country's name.
-- `UN_region`: String representing the UN region the country is in.
-- `area`: String representing the country's size in square kilometers.
-- `pop_ave`: Integer representing the calculated average population over the given range of years.
-- `total_threatened`: Integer representing the calculated total amount of threatened species over the given range of years.
+The program also includes several helper functions:
+- `average_pop`: calculates and returns the average population for a given country using population data.
+- `total_threatened`: calculates and returns the total number of threatened species for a given country using species data.
+- `pop_density`: calculates and returns a list of population densities for a given country using population data and country size.
 
-### Method: print_stats()
-Prints selected statistics for the inputted country.
+The `main` function is the entry point of the program. It reads data from CSV files (`Country_Data.csv`, `Population_Data.csv`, and `Threatened_Species.csv`) using numpy's `genfromtxt` function. It prompts the user to enter two valid countries and retrieves their respective statistics using the helper functions and the `printCountryInfo` class. It also plots graphs to compare population, threatened species, and population density between the two countries using matplotlib.
 
-## Function: average_pop(country_index, population_data)
-Calculates and returns the average population across the given range of years for the inputted country.
-
-- `country_index`: Integer representing the index of the given country.
-- `population_data`: Array representing data read in from a CSV file (population data from 2000-2020 for all UN countries).
-
-## Function: total_threatened(country_index, threatened_data)
-Calculates and returns the total amount of threatened species for the inputted country.
-
-- `country_index`: Integer representing the index of the given country.
-- `threatened_data`: Array representing data read in from a CSV file (threatened species data for all UN countries).
-
-## Function: pop_density(country_index, population_data, country_size)
-Calculates and returns a list of all the population densities for the inputted country over the given range of years.
-
-- `country_index`: Integer representing the index of the given country.
-- `population_data`: Array representing data read in from a CSV file (population data from 2000-2020 for all UN countries).
-- `country_size`: Integer representing the size of the country in square kilometers.
-
-## Function: main()
-The main function of the program that executes the analysis and visualization steps.
-
-- Reads CSV files for country data, population data, and threatened species data.
-- Prompts the user to input two valid countries from the UN.
-- Calculates average population, total threatened species, and population density for the selected countries.
-- Prints statistics for each country.
-- Displays visualizations comparing population, threatened species, and population density for the selected countries.
-
-Note: The code assumes the availability of CSV files named 'Country_Data.csv', 'Population_Data.csv', and 'Threatened_Species.csv' for reading data.
+Overall, the code provides a user-friendly interface to compare statistics and visualize data for different countries.
 
 ## Authors
-Oluwafisayo Adabs - @fisayoadabs
-Kameel Kasumu - @kameelkas
+- Oluwafisayo Adabs - @fisayoadabs
+- Kameel Kasumu - @kameelkas
+
+## Date Completed
+- December 2021
