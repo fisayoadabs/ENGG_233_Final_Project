@@ -47,5 +47,5 @@ The main function of the program that executes the analysis and visualization st
 Note: The code assumes the availability of CSV files named 'Country_Data.csv', 'Population_Data.csv', and 'Threatened_Species.csv' for reading data.
 
 ## Authors
-Oluwafisayo Adabs - fisayoadabs
-Kameel Kasumu - kameelkas
+Oluwafisayo Adabs - @fisayoadabs
+Kameel Kasumu - @kameelkas
